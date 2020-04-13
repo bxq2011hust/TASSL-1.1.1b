@@ -13,6 +13,10 @@
 # define HEADER_SM2_H
 # include <openssl/opensslconf.h>
 
+#ifdef  __cplusplus
+extern "C" {
+#endif
+
 # ifndef OPENSSL_NO_SM2
 
 #  include <openssl/ec.h>
@@ -75,4 +79,8 @@ int sm2_decrypt(const EC_KEY *key,
                 size_t ciphertext_len, uint8_t *ptext_buf, size_t *ptext_len);
 
 # endif /* OPENSSL_NO_SM2 */
+#ifdef  __cplusplus
+}
+#endif
+
 #endif

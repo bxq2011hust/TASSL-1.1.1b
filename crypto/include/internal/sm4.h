@@ -11,6 +11,9 @@
 #ifndef HEADER_SM4_H
 # define HEADER_SM4_H
 
+#ifdef  __cplusplus
+extern "C" {
+#endif
 # include <openssl/opensslconf.h>
 # include <openssl/e_os2.h>
 
@@ -33,5 +36,7 @@ int SM4_set_key(const uint8_t *key, SM4_KEY *ks);
 void SM4_encrypt(const uint8_t *in, uint8_t *out, const SM4_KEY *ks);
 
 void SM4_decrypt(const uint8_t *in, uint8_t *out, const SM4_KEY *ks);
-
+#ifdef  __cplusplus
+}
+#endif
 #endif
